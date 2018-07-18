@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as io from 'socket.io-client';
 import { Observable } from 'rxjs';
 import * as Rx from 'rxjs-compat';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class WebsocketService {
   constructor() { }
 
   connect(): Rx.Subject<MessageEvent> {
-    this.socket = io('http://localhost:3000');
+    this.socket = io(environment.ws);
 
     const observable = new Observable(obs => {
       this.socket.on('messages', (data) => {

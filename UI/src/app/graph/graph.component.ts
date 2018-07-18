@@ -25,8 +25,8 @@ export class GraphComponent implements OnInit {
   private yAxis: any;
   private x: number;
   private y: number;
-  private statusX: string;
-  private statusY: string;
+  public statusX: string;
+  public statusY: string;
   private svg: any;
   private tip: any;
   private point: d3Shape.Symbol<this, [number, number]>;
