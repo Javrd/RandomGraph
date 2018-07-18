@@ -1,0 +1,40 @@
+.axis {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis-title {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5px;
+}
+
+
+.axis--x path {
+    /*display: none;*/
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 90px;
+    height: 24px;
+    padding: 8px;
+    margin-top: -20px;
+    font: 10px sans-serif;
+    background: #ddd;
+    pointer-events: none;
+    opacity: 1;
+  }

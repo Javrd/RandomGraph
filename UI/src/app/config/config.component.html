@@ -1,0 +1,48 @@
+<div *ngIf="x.status; else loader" class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-12">
+          <strong>Abscissa range: </strong>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-inline col-md-12">
+          <label for="xMin" class="col-md-2">Min:</label>
+          <input class="form-control col-md-4" step=".01" id="xMin" type="number" [(ngModel)]="x.min">
+          <label for="xMax" class="col-md-2">Max:</label>
+          <input class="form-control col-md-4" step=".01" id="xMax" type="number" [(ngModel)]="x.max">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-inline col-md-12">
+          <label for="xTime" class="col-md-8">Time elapse between abscissas generation:</label>
+          <input class="form-control col-md-4" id="xTime" type="number" [(ngModel)]="x.time">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <strong>Ordinate range: </strong>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-inline col-md-12">
+          <label for="yMin" class="col-md-2">Min:</label>
+          <input class="form-control col-md-4" step=".01" id="yMin" type="number" [(ngModel)]="y.min">
+          <label for="yMax" class="col-md-2">Max:</label>
+          <input class="form-control col-md-4" step=".01" id="yMax" type="number" [(ngModel)]="y.max">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-inline col-md-12">
+          <label for="yTime" class="col-md-8">Time elapse between ordinates generation:</label>
+          <input class="form-control col-md-4" id="yTime" type="number" [(ngModel)]="y.time">
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-end col-md-1">
+      <button type="button" class="btn btn-primary" (click)="updateConf()">Update</button>
+    </div>
+  </div>
+</div>
+<ng-template #loader><img src="assets/images/loader.gif"></ng-template>

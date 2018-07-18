@@ -1,0 +1,5 @@
+<svg width="900" height="500"></svg>
+<button *ngIf="statusX === 'STOPPED '; else buttonX" type="button" class="btn btn-primary" (click)="startX()">Start X</button>
+<ng-template #buttonX><button type="button" class="btn btn-primary" (click)="stopX()">Stop X</button></ng-template>
+<button *ngIf="statusY === 'STOPPED '; else buttonY" type="button" class="btn btn-primary" (click)="startY()">Start Y</button>
+<ng-template #buttonY><button type="button" class="btn btn-primary" (click)="stopY()">Stop Y</button></ng-template>
